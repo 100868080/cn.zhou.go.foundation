@@ -1,0 +1,18 @@
+//echo2 peints its command-line ar guments.
+package main
+
+import (
+	"os"
+)
+import (
+	"fmt"
+)
+
+func main() {
+	s, sep := "", ""
+	for _, arg := range os.Args[1:] {
+		s += sep + arg
+		sep = ""
+	}
+	fmt.Println(s)
+}
